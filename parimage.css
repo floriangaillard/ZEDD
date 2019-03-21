@@ -1,0 +1,475 @@
+@charset "UTF-8";
+/* reset css */
+a, :link, :visited, :focus { text-decoration: none; outline: 0; } /* pas de souligne car degrade visibilite du texte */
+ul, ol { list-style: none; } /* pas de style pour les listes car utilisation principale semantique */
+h1, h2, h3, h4, h5, h6, pre, code { font-size: 1em; } /* inconsistence de taille des navigateurs en titrage */
+body, html, div, span, applet, object, iframe, form, fieldset, legend, label, input, textarea, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; } /* inconsistence de marge et padding */
+h1, h2, h3, h4, h5, h6, p, pre, blockquote, ul, ol, dl, address { margin: 0 0 1em 0; padding: 0; } /* marge verticale logique */
+li, dd, blockquote { margin: 0 0 0 1em; } /* marge gauche logique */
+img, fieldset, a img, :link img, :visited img { border: 0; } /* supprime le tour bleu des images avec liens */
+table { border-collapse: collapse; border-spacing: 0; } /* nettoie table, pensez aussi html cellspacing et cellpadding */
+
+/* Utilisation de la police Gothic */
+
+@font-face {
+	font-family: 'century gothic';
+	src: url('../font/gothic-webfont.eot');
+	src: local('☺'), url('../font/gothic-webfont.woff') format('woff'), url('../font/gothic-webfont.ttf') format('truetype'), url('../font/gothic-webfont.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.logo {
+  font-family:"century gothic"; 
+  font-size: 22px;line-height: 26px;
+  margin: 10px 0;
+  text-align: center;
+  display: block;
+}
+.logo a {
+  color: #999999;color:#fff;
+  text-align: left;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); 
+}
+#menu .logo {
+   color:#999;color:#fff;
+   font-size: 22px;
+   position: absolute;
+   top:0;left:-15px;
+   width:230px;
+}
+
+body {
+  font-family: "Trebuchet MS",Verdana,"Lucida Grande",Tahoma,Helvetica,Sans-Serif;
+	font-size: 12px;
+	line-height: 18px;
+	background-color: #383838;
+	background: #636363 url(../img/bkg.jpg) repeat 0 0;
+}
+
+h1,h2 {
+  font-size: 20px;
+  font-family:"century gothic"; 
+  margin: 0 0 0.5em 0;
+  color:#999;color: #cc0000;color:#000060;
+  width: 95%;
+  line-height: 24px;text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+h2 {font-size:16px;}
+
+#contenu .txt ul,#contenu .txt_projet ul,#coldr ul {list-style:square;margin-left: 1em;}
+
+a {color: #65870d;color: #cc0000;color: #003872;}
+
+h3.spip {
+	border-bottom: 1px dotted #ccc;
+	font-size: 16px;
+	width:auto;
+	padding-bottom: 5px;
+	font-family: "century gothic",sans-serif;
+}
+
+.spacer { width:100%; visibility:hidden; clear:both; }
+.contenu_tab ul.spip {list-style-type: disc;margin-left: 10px;}
+.contenu_tab ol.spip {list-style-type: decimal;}
+.spip_documents_left {margin: 0 1.5em 1em 0;}
+.spip_documents_right {margin: 0 0 1em 1.5em;}
+.spip_documents_center {margin: 0.5em auto;display: block;}
+
+.spip_doc_player {margin: 0;padding: 0;float: left;}
+.audioplayer11 {margin: 0;padding: 0;margin-left: -10px;}
+
+/* liens auto et liens sortants */
+.spip_out { padding-right: 12px; background: url(../img/lien_externe.gif) right no-repeat;  }
+.spip_out {background: none;padding: 0;}
+#wrapper {
+  width:1020px;
+  margin: 30px auto 0 auto;
+  min-height: 1000px;
+}
+
+
+/*** bloc accueil ***/
+#contenu_intro {
+  width:1120px; 
+  margin: 20px auto; padding: 0; 
+  color:#000;
+  text-align: justify;
+}
+
+#contenu_intro a {
+   display: block; float: left;
+   margin: 0 0 20px 0;
+   font-family:"century gothic";font-size: 13px;
+   color:#2929A3;color:#000;
+   opacity: 0.9;
+   width: 210px; height: 316px;
+   background: #ccc;
+   padding:10px 15px;
+   -webkit-border-radius: 5px;
+	 -moz-border-radius: 5px;
+	 border-radius: 5px;
+   behavior: url(squelettes/cssjs/PIE.html);	
+}
+#contenu_intro a span {text-align: center;}
+#contenu_intro a:hover {color:#ccc;background: #636363 url(../img/bkg.jpg) repeat 0 0;}
+
+#blocfren { width: 240px; float: left; margin: 0; }
+
+#paccueil { float: left; width: 872px; margin: 0; padding: 0; }
+#paccueil li { width: 416px; height: 336px; float: left; margin: 0 0 20px 20px; padding: 0; background: #636363 url(../img/bkg.jpg) repeat 0 0; }
+
+.pagination {text-align: right;}
+
+.lang { float: left; width:200px; margin-top: 5px;}
+.lang a { display: block; float: left; }
+.lang a:hover,.lang a.on {opacity: 1;}
+
+.menu {width: 200px; float: left;margin-top: 70px;position: relative;}
+
+#menu {padding: 0px 0; width: 200px; float: left;margin:0;margin-right: 30px;position: relative;}
+/* Vertical Mega Menu Styles */
+.dcjq-vertical-mega-menu .menu {
+   font: bold 13px Arial, sans-serif;font-family:"century gothic";  
+   line-height: 16px; 
+   position: relative; /* Required */
+   border: 1px solid #999;
+   border-bottom: none;
+   -webkit-border-radius: 8px;
+	 -moz-border-radius: 8px;
+	 border-radius: 8px;
+	 behavior: url(squelettes/cssjs/PIE.html);	
+}
+.first {
+  -webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius:5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+  behavior: url(squelettes/cssjs/PIE.html);	
+}
+.dcjq-vertical-mega-menu .last {
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius:  0 0 5px 5px;
+  behavior: url(squelettes/cssjs/PIE.html);	
+}
+
+.dcjq-vertical-mega-menu .menu li {margin: 0;}
+.dcjq-vertical-mega-menu .menu li a {
+  display: block; 
+  color: #000; color:#383838;
+  padding: 10px 38px 10px 25px; 
+  text-shadow: 1px 1px 1px #fff; 
+  text-decoration: none;
+  border-bottom: 1px solid #999;
+  background: url(images/bg_nav.png) repeat-x 0 0;
+  text-transform: uppercase; 
+  /*
+  font-size: 15px;
+  font-family: 'century gothic';
+  */
+}
+.dcjq-vertical-mega-menu .menu li a:hover, .dcjq-vertical-mega-menu .menu li.mega-hover a, .dcjq-vertical-mega-menu .menu li a.on {
+  background-position: 0 -40px; 
+  color: #fff; 
+  text-shadow: 1px 1px 1px #000;
+}
+.dcjq-vertical-mega-menu .menu li a.dc-mega {
+  position: relative;
+}
+/* Add arrow icon to parent links */
+.dcjq-vertical-mega-menu .menu li a .dc-mega-icon {
+	display: block; 
+	position: absolute; 
+	top: 14px; 
+	right: 15px; 
+	width: 6px; 
+	height: 8px; 
+	background: url(images/arrow_right.png) no-repeat -6px 0;
+}
+.dcjq-vertical-mega-menu .menu li a:hover .dc-mega-icon, .dcjq-vertical-mega-menu .menu li.mega-hover a .dc-mega-icon {
+  background-position: 0 0;
+}
+/* Mega menu container */
+.dcjq-vertical-mega-menu .menu li .sub-container {
+  position: absolute; /* Required */
+  overflow: hidden;
+  background: url(images/bg_menu.png) no-repeat 100% 100%; /* Add the drop shadow */
+  padding: 0 13px 10px 0; /* Padding for drop shadow */
+}
+.dcjq-vertical-mega-menu .menu li .sub-container .sub {
+ border: none;
+ padding: 15px 15px 5px 15px;
+ background: #fff url(images/bg_grad_top.png) repeat-x 0 0;
+ border-top: 1px solid #ccc; 
+ border-right: 1px solid #bbb;
+ border-bottom: 1px solid #bbb;
+ border-left: 1px solid #ccc;
+ 	-webkit-border-radius: 0 5px 5px 5px;
+	-moz-border-radius: 0 5px 5px 5px;
+ border-radius: 0 5px 5px 5px;
+ behavior: url(squelettes/cssjs/PIE.html);	
+}
+.dcjq-vertical-mega-menu .menu li .sub .row {
+  width: 100%; overflow: hidden; /* Clear floats */
+}
+.dcjq-vertical-mega-menu .menu li .sub li  {
+ float: none; width: 160px; 
+ font-size: 12px; 
+ font-weight: normal;
+}
+.dcjq-vertical-mega-menu .menu li .sub li.mega-hdr {
+ float: left; /* Required */
+ margin: 0 5px 10px 5px;
+/*  box-shadow: 5px 5px 8px #ccc; */
+}
+.dcjq-vertical-mega-menu .menu li .sub a, .dcjq-vertical-mega-menu .menu.left li .sub a,#list_publics a.titre_publics {
+  background: none; 
+  border: none; 
+  text-shadow: none;
+  float: none;
+  color: #000; 
+  display: block;
+  text-decoration: none; 
+  font-size: 1em;
+  margin-bottom: 0;
+  font-family: "Trebuchet MS",sans-serif;
+}
+.dcjq-vertical-mega-menu .menu li .sub li.mega-hdr a.mega-hdr-a,#list_publics a.titre_publics {
+		background: url(images/bg_nav.png) repeat-x 0 -40px; 
+		padding: 5px;
+		margin-bottom: 5px;
+		text-transform: uppercase; 
+		font-weight: bold; 
+		color: #fff;
+		text-shadow: 1px 1px 1px #000;
+		text-align: center;
+}
+.dcjq-vertical-mega-menu .menu li .sub li.mega-hdr a.mega-hdr-a:hover {
+		color: #000; 
+		text-shadow: none;
+}
+ .dcjq-vertical-mega-menu .menu .sub li.mega-hdr li {margin-bottom: 3px;} 
+.dcjq-vertical-mega-menu .menu .sub li a,#list_publics li ul li a  {
+		padding: 3px 3px 3px 15px;
+		background: url(images/bullet.png) no-repeat 3px 9px;
+		font-weight: normal;
+		text-transform: none;
+}
+.dcjq-vertical-mega-menu .menu .sub li a:hover,.dcjq-vertical-mega-menu .menu .sub li a.on  { 
+  color: #fff;
+  background: #A3A2A2 url(images/bullet_white.png) no-repeat 5px 9px;
+}
+
+.dcjq-vertical-mega-menu .menu .sub ul li {
+   padding-right: 0;
+}
+
+/* Styling for menu items with only 2 levels */
+.dcjq-vertical-mega-menu .menu li .sub-container.non-mega .sub {
+  padding: 10px;
+  background: #fff;
+}
+.dcjq-vertical-mega-menu .menu li .sub-container.non-mega li {
+  padding: 0; margin: 0;
+  width: 150px;
+  float: none;
+}
+
+.txt {
+  width:auto;float: left;
+}
+.txt_projet {
+  width:330px;
+  float:left;padding: 10px; 
+}
+#coldr {
+  width:330px;float: left;float: right;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+
+.nbfilms {font-size: 11px;}
+#vignfilms {
+  float: left;width:330px;
+}
+#vignfilms .vignfilmcontenu {
+  float:left;width:316px;
+  margin: 0.5em 0;
+  padding: 10px 7px;
+  box-shadow: 5px 5px 8px #ccc;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+#vignfilms h4 {
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 8px;
+}
+#vignfilms .mediabox {float:left;margin-right:10px;display: block;width:140px;text-align: center;}
+#vignfilms .mediabox img,#films .mediabox img {float: left;}
+.tempsfilm {
+  display: block;
+  background: #636363 url(../img/bkg.jpg) repeat 0 0;
+  color:#ccc;float: left;width:100%;
+  text-align: center;
+}
+/* #cboxWrapper #cboxTitle { float: left; position: relative;} */
+
+
+/*** menu list publics ***/
+#list_publics {
+ width:auto;float: left;margin-top: 10px;
+}
+#list_publics li {
+  width:165px;float: left; 
+  margin: 0 5px 5px 5px;
+}
+#list_publics li ul li a {
+  color:#000;display: block;
+}
+
+#contenu {
+  width:710px;min-height: 650px;font-size: 13px;position: relative;
+  float: left;
+  padding: 20px;
+  background-color: white;
+  -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+  behavior: url(squelettes/cssjs/PIE.html);	
+/*   box-shadow: 2px 2px 2px #ccc; */
+}
+
+/*** projets list par publics ***/
+#projets {width:auto;float:left;}
+#projets h3 a {color: #000;}
+#projets li.projet {
+   width:95%;height:auto;float:left; 
+   padding: 10px 15px;
+   margin: 0;
+   border-bottom: 1px dotted #3A3E41;
+   position: relative;
+}
+
+.det_projet {width:460px;float: left;font-size: 12px;margin: 0.5em 0;}
+
+#projets li.projet ul li {width:140px;float:left;margin: 0.5em;margin-right:15px;line-height: 14px;}
+
+.titre_projet {width:100%;float: left;color:#3F4346;}
+.titre_projet a {display: block;font-size:16px;float: left;width:auto;font-family: 'century gothic',sans-serif; color:#000; }
+.titre_projet a:hover {color:#ccc;}
+
+.infos_projet {
+  background: #636363 url(../img/bkg.jpg) repeat 0 0;  /* background: transparent url(../img/projet.png) no-repeat 50% 0; border: 1px solid red; */
+  width:170px;min-width:170px;float: left;
+  height: auto;min-height: 152px;
+  padding: 2px;
+  box-shadow: 3px 3px #333;
+  color: #fff;
+  text-align: center;margin-right: 20px;
+}
+.devenir {display:block;height:90px;text-align:center;padding:10px;color: #fff;text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);font-size:14px;}
+.plus {
+  display: block; width:100px; float: right;
+  background-color: #3B3F42;
+  color:#fff;
+  padding: 1px 4px;
+  -webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  behavior: url(squelettes/cssjs/PIE.html);	
+  position: absolute;bottom:0;right:0;
+  text-align: center;
+}
+.plus:hover {color: #cc0000; color:#ccc;}
+
+
+.info {
+  background-color: #383838; 
+  width:14px;float: left;position: relative;
+  -webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+  border-radius: 10px;
+  behavior: url(squelettes/cssjs/PIE.html);	
+  color:white;display: block;
+  padding:0 2px;
+  font-family: 'century gothic',sans-serif; 
+  cursor: pointer;
+  text-transform: lowercase;
+  margin-left: 5px;margin-top: 0px;text-indent: 3px;
+}
+
+
+h4 a {color:#383838;font-size: 14px;display: block;float: left;margin-bottom: 0.5em;}
+
+#videogrand {display: block;float: left;width:auto;height:240px;border:1px dotted #ddd;}
+#vignprojets {width: 100%;float: left;margin-top: 15px;}
+#vignprojets li {width:100px;float: left;margin-right: 10px;}
+
+#footer {clear:both;font-size:11px;color:#ddd;text-align: right;padding-top: 5px;margin-right: 60px;}
+#footer a {color:#999;}
+
+
+#tags {
+  width:200px;float:left;position: relative;
+  background: #fff; 
+  -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 20px 0;
+  text-align: center;
+  behavior: url(squelettes/cssjs/PIE.html);	
+}
+#tags a.mediabox {display: block;width:160px;float: left;margin-left: 20px;margin-bottom: 5px;}
+#tags a.mediabox img {float: left;width: auto;}
+.annee {width:100%;float: left;}
+.tag-list {width:200px;float: left;margin-top: 5px;}
+.tag-list li {width:auto;float: left;}
+.tag-list a , .tag-list-films a {
+  padding: 2px 7px 2px 7px;width:146px;display: block;float: left;position: relative;
+  border: 1px solid #bdbdbd;
+  background-color: #e0e0e0;
+  color: #838383;
+  font-size: 11px;
+  line-height: 23px;
+  text-transform: none;
+  -webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+  border-radius: 2px;
+  behavior: url(squelettes/cssjs/PIE.html);	
+  margin: 0.2em;
+  font-family: 'century gothic',sans-serif; 
+}
+
+.tag-list a:hover, .tag-list a:focus {
+ background-color: #eeeeee;
+}
+
+.tag-list li.on a {	background: #636363 url(../img/bkg.jpg) repeat 0 0; color:#fff;}
+.tag-list-films {width:100%;float: left;}
+
+
+/*** page films ***/
+#films { width:710px;}
+#films tr {border-bottom: 1px dotted #ccc;}
+#films th {background-color: #ddd;}
+#films td {
+ width:auto;padding: 5px; vertical-align: top;
+}
+.play {float: left;margin-right: 5px;}
+
+/*** tables spip ***/
+table.spip { width: 100%;margin: 0.5em 0;}
+table.spip tr.row_first {background-color: #A0A0A0;color:white;}
+table.spip th { padding: 3px 0; background-color: #A0A0A0;}
+table.spip td {
+	width: 33%;
+	padding: 5px;
+	text-align: center;
+	vertical-align: top;
+  border: 1px dotted #ccc;
+}
+
+#coldr table.spip td {text-align: left;}
